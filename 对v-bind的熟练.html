@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<style>
+    .pic{
+        height: 300px;
+        border: 3px red solid;
+    }
+</style>
+<div id="app">
+
+<!--    <img v-bind:class="{pic:showCss}" v-bind:src="src" v-bind:title="title">-->
+<!--  v-bind简化写法  -->
+    <img :class="{pic:showCss}" :src="src" :title="title">
+
+<!--    <img src="timg (2).jpg" height="441" width="309"/>-->
+    <input type="button" value="切换图片" @click="change_pic">
+    <input type="button" value="切换图片样式" @click="change_yang">
+
+    
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            src:'timg.jpg',
+            title:'林允儿',
+            showCss:true,
+        },
+        methods:{
+            change_pic(){
+                if (this.src=='timg.jpg'){
+                    this.src="timg (2).jpg";
+                    this.title='林允儿two';
+                }else {
+                    this.src = 'timg.jpg';
+                    this.title = '林允儿';
+                }
+
+            },
+            change_yang(){
+                this.showCss=false;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+<!--  v-text和{{}}插值表达式的区别：
+    v-text会覆盖原来的标签的值，{{}}插值表示式不会覆盖，会与原有的值进行拼接
+  -->
+    <span>{{chilren}}好好学习</span>
+    <span v-text="chilren">好好学习</span>
+<hr>
+    <span>{{study}}</span>
+    <br>
+<!--  v-html获取data数据中的html标签  -->
+    <span v-html="study"></span>
+</div>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            chilren:"王超",
+            father:"武崇刚",
+            study:"<a href=\"\">天天向上</a>",
+        },
+    })
+</script>
+
+</body>
+</html>

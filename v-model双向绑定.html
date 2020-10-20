@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <input type="text" v-model="message" @click="changes">
+<!--    <input type="button" value="点我" @click="changes">-->
+    <p>{{message}}</p>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message:'',
+        },
+        methods:{
+            changes(){
+                this.message='呵呵'
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

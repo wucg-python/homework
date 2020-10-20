@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  vue  js的引入  -->
+<!-- 网络地址，必须联网 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  -->
+    <script src="js/vue.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2>{{message}} {{name}} --{{age}}</h2>
+
+</div>
+
+
+<script>
+    new Vue({
+        el: "#app",
+        data:{
+            message: "hello !!!",
+            name: "世界",
+            age:18,
+        },
+    })
+</script>
+
+</body>
+</html>

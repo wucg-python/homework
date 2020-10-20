@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+<!--    <span v-show="is_show">{{name}}</span><hr>-->
+<!--    <input type="button" @click="is_live" value="王超人没了">-->
+    <span v-if="is_show">{{name}}</span>
+    <span v-else>{{die}}</span>
+    <span v-else-if="true">嘿嘿嘿</span>
+    <input type="button" @click="is_live" value="哈哈">
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            name:'王超',
+            'is_show':true,
+            die:'王超人没了',
+        },
+        methods:{
+            is_live(){
+                this.is_show=false;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

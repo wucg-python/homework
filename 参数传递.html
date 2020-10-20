@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+<h2>{{meg}}</h2>
+    <input type="button" value="你猜？" @click="add('武崇刚的儿子')">
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            meg:'王超是谁',
+        },
+        methods:{
+            add(name){
+                this.meg = name
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

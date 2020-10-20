@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    {{username}}
+<span>{{name}}</span><br>
+<span>{{age}}</span><br>
+<span>{{object.name}}-----{{object.age}}</span><br>
+<span>{{arr[1]}}</span>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            //字符串
+            'username':"小智",
+            name:"小红",
+            //数字
+            age:10,
+            //数组
+            arr:['小智','小霞','小红','小绿'],
+        //   对象
+            object:{'name':10,'age':11},
+
+        },
+    })
+</script>
+
+</body>
+</html>

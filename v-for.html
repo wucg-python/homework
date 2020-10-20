@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+<!--  遍历数组  -->
+<!--    <h2 v-for="city in arr">{{city}}</h2>-->
+<!--    <h2 v-for="(city,index) in arr">{{city}}&ndash;&gt;{{index}}</h2>-->
+<!--    <ul v-for="value in user">{{value}}-->
+<!--  遍历对象  -->
+<!--    <ul v-for="(value,key,index) in user">{{value}}&ndash;&gt;{{key}}-->
+<!--    </ul>-->
+<!--  遍历数组中的对象  -->
+<ul>
+    <li v-for="(user,index) in users" :key="index">{{index+1}}-{{user.name}}-->{{user.age}}</li>
+</ul>
+
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            user:{name:'小强',age:18,password:'123456'},
+            arr:['陕西','山西','山溪'],
+            users:[{name:'小强',age:18,password:'123456'},
+                {name:'小张',age:15,password:'123456'},
+                {name:'小李',age:25,password:'1235987'},]
+        },
+    })
+</script>
+
+</body>
+</html>

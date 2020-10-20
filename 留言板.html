@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-model="message">
+    <input type="button" value="发表留言板" @click="send">
+    <ul>
+        <li v-for="(note,index) in notes">{{index+1}}.{{note}}
+            <a href="javascript:void(0);" @click="pop(index)">删除</a>
+        </li>
+    </ul>
+    <span v-show="is_show">留言总数：{{notes.length}}</span>
+    <input type="button" value="删除所有" v-show="is_show" @click="both">
+</div>
+
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            message:'',
+            notes:[],
+            is_show:false,
+        },
+        methods:{
+            send(){
+                if (this.message){
+                    // this.notes.push(this.message)
+                    this.notes.unshift(this.message)
+                    this.message = ""
+                }else {
+
+                }
+                if(this.notes.length===0){
+                    this.is_show=false;
+                }else {
+                    this.is_show=true;
+                }
+            },
+            pop(index){
+                this.notes.splice(index,1)   //从下标为index的位置往后删除一个
+                if(this.notes.length===0){
+                    this.is_show=false;
+                }else {
+                    this.is_show=true;
+                }
+            },
+            both(){
+                this.notes = [];
+                if(this.notes.length===0){
+                    this.is_show=false;
+                }
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
