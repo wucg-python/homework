@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f95800b-c260-492b-81a5-7ab1571f13e1" name="Default Changelist" comment="" />
+    <list default="true" id="2f95800b-c260-492b-81a5-7ab1571f13e1" name="Default Changelist" comment="添加gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +35,9 @@
         <option value="template" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1j85Zxd3lq8Ep071Rlacgk0TNlG" />
   <component name="ProjectViewState">
@@ -43,7 +67,16 @@
       <updated>1603172940523</updated>
       <workItem from="1603172942874" duration="183000" />
       <workItem from="1603183349226" duration="16253000" />
+      <workItem from="1603239636389" duration="713000" />
     </task>
+    <task id="LOCAL-00001" summary="添加gitignore">
+      <created>1603239809959</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603239809959</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -52,15 +85,30 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加gitignore" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="466" y="110" key="FileChooserDialogImpl" timestamp="1603189267935">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="110" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603189267935" />
-    <state x="186" y="10" key="SettingsEditor" timestamp="1603239594384">
+    <state x="186" y="10" key="SettingsEditor" timestamp="1603240016863">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603239594384" />
+    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603240016863" />
     <state x="539" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603193960153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
