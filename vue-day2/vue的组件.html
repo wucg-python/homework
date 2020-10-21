@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<!--代码的复用-->
+<div id="app">
+<!--  组件的使用：组件注册后的名称作为html页面中的标签  -->
+    <zu></zu>
+    <zu></zu>
+
+</div>
+
+<script>
+
+    // 组件的定义，组件是一个js对象
+    // 组件中的属性除了data的定义与vue实例不同外，其余没有区别
+    let zu = {
+        // html页面   template使用反引号
+        // div标签不能有兄弟标签
+        template:`
+        <div>我爱学习
+        <button @click="add">数字{{number}}</button>
+        </div>
+        `,
+    //
+        data:function () {
+            return {
+                number:0,
+            }
+        },
+        methods:{
+            add(){
+                this.number+=1;
+            }
+        }
+    }
+    // 组件注册    全局注册
+    Vue.component('zu',zu)
+
+    //  特殊的组件 vue实例
+    new Vue({
+        el: "#app",
+        data: {},
+    })
+</script>
+
+</body>
+</html>

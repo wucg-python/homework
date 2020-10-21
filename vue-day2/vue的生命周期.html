@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+<h2>呵呵</h2>
+    <h1 id="h">{{name}}</h1>
+    <button @click="changes">改变</button>
+
+</div>
+<!-- vue的生命周期 -->
+<script>
+
+    // 创建一个vue的实例   初始化
+    new Vue({
+        el: "#app",
+        data: {
+            name:"小王",
+        },
+        methods:{
+            changes(){
+                this.name = "小王绿了";
+            }
+        },
+        //  vue生命周期的第一个钩子函数   该函数在执行时vue实例仅完成
+        // 自身事件的绑定和初始化
+        //  vue实例中还没有el  data  methods  等属性
+        beforeCreate:function () {
+            console.log(this.name)
+        },
+        //  该函数执行时  el  data methods  等属性已初始化
+        created:function () {
+            console.log('created:'+this.name)
+        },
+
+        //  该函数执行时vue 将el作为执行范围来进行模板渲染
+        beforeMount:function () {
+            //   此时data 中的数据还未渲染到页面上
+            console.log('beforeMount:'+document.getElementsByName('h1')[0].innerText)
+            console.log('beforeMount:'+document.getElementsByName('h2')[0].innerText)
+        },
+        //   此函数执行时已经将数据渲染在页面上并完成了页面的更新
+        mounted:function (){
+            console.log('mounted:'+document.getElementById("h").innerText)
+        },
+
+        // 在该函数执行时vue实例中的数据被修改但还未渲染到页面上，页面还依然是原来的数据
+        beforeUpdate:function () {
+            console.log("beforeUpdate:"+this.name)
+            console.log("beforeUpdate:"+document.getElementById('h').innerText)
+
+        },
+
+        //  该函数执行时vue实例中的数据和页面上渲染的数据都已更新完毕
+        updated:function () {
+            console.log("updated:"+this.name)
+            console.log("updated:"+document.getElementById('h').innerText)
+        },
+
+        //  该函数执行时，vue实例中的data 等属性还未被销毁
+        beforeDestroy(){
+        },
+
+    //    该函数执行时，vue实例已被销毁
+        destroyed(){
+
+        },
+    })
+</script>
+
+</body>
+</html>

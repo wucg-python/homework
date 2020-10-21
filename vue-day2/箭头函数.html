@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script>
+    //   正常函数
+    function f(a,b) {
+        console.log(a*b)
+    }
+    f(12,2)
+
+    // 匿名函数
+    f1 = function (a,b) {
+        console.log(a+b)
+    }
+    f1(5,2)
+
+    // 箭头函数是对匿名函数的简化
+    let f2 = (a,b) => console.log(a*b)
+    f2(5,8)
+
+    //  只有一个参数的箭头函数
+    let f3 = a => console.log(a)
+    f3(5)
+
+    // 多个参数，函数体有多条语句的箭头函数
+    let f4 = (a,b,c) => {
+        console.log(a)
+        console.log(b+c)
+    }
+    f4(1,5,8)
+
+
+
+
+    // 在回调函数中使用箭头函数
+
+
+    // 定义一个user对象
+    let user = {
+        username: "小王",
+        use: function () {
+            console.log(this.username)     // this指向当前的user实例
+        }
+    }
+    user.use()
+    
+    let user1 = {
+        username:"小",
+        use:function () {
+            console.log(this)
+            setTimeout(function () {
+                // this的指向被改变
+                console.log(this.username)
+                console.log(this)
+            })
+        }
+    }
+    user1.use()
+
+    let user2 = {
+        username:"小",
+        use:function () {
+            console.log(this)
+            // 在回调函数中使用箭头函数不会改变指向
+            setTimeout(()=> {
+                console.log(this.username)
+                console.log(this)
+            })
+        }
+    }
+
+
+    new Vue({
+        el: "#app",
+        data: {},
+    })
+</script>
+
+</body>
+</html>

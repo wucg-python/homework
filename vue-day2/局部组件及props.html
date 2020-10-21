@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<style>
+    .red{
+       color: red;
+    }
+    .blue{
+        color: blue;
+    }
+    .yellow{
+        color: yellow;
+    }
+</style>
+
+<div id="app">
+    <zu color="red"></zu>
+    <zu color="blue"></zu>
+    <zu color="yellow"></zu>
+</div>
+
+<script>
+    // 组件的定义
+    let zu = {
+        
+        template: `
+        <div :class="color">王超又变帅了
+
+        </div>
+        `,
+        props:["color"]
+    }
+    // 根组件
+    new Vue({
+        el: "#app",
+        data: {},
+
+        // 将zu注册给vue实例
+        // 局部组件只能在注册的vue实例中使用
+        components:{
+            zu:zu,
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+<chilren :name="name"></chilren>
+</div>
+
+<script>
+
+    let chilren = {
+        template:`
+            <div>
+            <div>儿子，爸爸来了</div>
+            <div>儿子叫{{name}}</div>
+            </div>
+        `,
+        props:['name']
+    }
+
+    new Vue({
+        el: "#app",
+        data: {
+            name:'王超',
+        },
+        components:{
+            "chilren":chilren,
+        }
+    })
+</script>
+
+</body>
+</html>

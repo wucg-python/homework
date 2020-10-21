@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+<!--  多个变量的显示依赖于一个变量的改变  -->
+<!--    <button @click="number">数字：{{num}}</button>-->
+<!--    <b>十位：{{parseInt(num/10)}}</b>-->
+<!--    <b>个位：{{num%10}}</b>-->
+<!--    <input type="number" v-model="num">-->
+<!--    <b>十位：{{num}}</b>-->
+<!--    <b>个位：{{num}}</b>-->
+
+<!--  一个变量的显示依赖于多个变量适用计算属性computed  -->
+    <input type="number" v-model="shi" max="9" min="0">
+    <input type="number" v-model="ge" max="9" min="0">
+    <b>{{result}}</b>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            num: 1,
+            shi:"",
+            ge:"",
+        },
+        methods:{
+            // number(){
+            //    this.num+=1;
+            // }
+        },
+        computed:{
+            // 定义的方法属性
+            result(){
+                return this.shi *10+this.ge
+            }
+        }
+
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+<h2>王超的爸爸是：{{name}}</h2>
+    <sups @father="fathers"></sups>
+</div>
+
+<script>
+
+    let sups = {
+        template:`
+        <div>
+          <button @click="fa">你猜</button>
+</div>
+        `,
+        data:function (){
+            return {
+                name:"武崇刚",
+            }
+        },
+        methods:{
+            fa(){
+                this.$emit('father',this.name)
+            }
+        }
+    }
+
+    new Vue({
+        el: "#app",
+        data: {
+            name:'',
+        },
+        components:{
+            sups:sups,
+        },
+        methods: {
+            fathers(name){
+                this.name = name;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
