@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <h1>学习系统</h1>
+    <router-link to="/index">访问主页</router-link>
+    <router-link to="/user">访问用户页</router-link>
+    <hr>
+    <router-view></router-view>
+</div>
+
+<script>
+
+    let index = {
+        template:`
+        <h3>这是我的主页</h3>
+        `
+    }
+
+    let user = {
+        template: `
+        <h3>这是用户页面</h3>
+        `
+    }
+
+    //    定义路由
+    let myrouter = new VueRouter({
+        routes:[
+            // 访问组件的地址和对应的组件
+            {path:'/index',component:index},
+            {path: '/user',component:user},
+        ]
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        // 注入定义好的vue路由
+        //通过router配置参数注入，从而使整个vue实例都拥有路由功能
+        router:myrouter,
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+
+<div id="app">
+<h2>欢迎来到我是王超的爹的系统</h2>
+    <router-link to="/index">回到首页</router-link>
+    <router-link to="/user">访问用户页面</router-link>
+    <hr>
+<router-view></router-view>
+</div>
+
+<script>
+    let index = {
+        template:`
+        <div>
+        <h4>欢迎来到主界面</h4>
+</div>
+        `
+    }
+
+    let user = {
+        template: `
+        <div>
+        <h4>欢迎来到用户界面</h4>
+        <table border="1px" cellspacing="0">
+        <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+        <td>gender</td>
+</tr>
+<tr v-for="use in users">
+        <td>{{use.id}}</td>
+        <td>{{use.name}}</td>
+        <td>{{use.age}}</td>
+        <td>{{use.gender}}</td>
+</tr>
+
+</table>
+</div>
+        `,
+        data(){
+            return {
+                users:[{"id":1,name:"王超",age:18,gender:"女"},
+                    {"id":2,name:"王超",age:20,gender:"女"},
+                    {"id":3,name:"王超",age:21,gender:"女"},]
+            }
+        }
+    }
+
+    let wu = {
+        template:`
+        <div>抱歉，未找到该页面</div>
+        `
+    }
+
+    let myrouter = new VueRouter({
+        routes:[{path:"/index",component:index},
+            {path: "/user",component: user},
+            //当路由匹配到/时，会重定向到首页
+            {path:"/",component: index},
+        //    当页面匹配到/* 时，会重定向到该页面
+            {path: "/*",component: wu}
+
+        ]
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        router:myrouter,
+
+    })
+</script>
+
+</body>
+</html>

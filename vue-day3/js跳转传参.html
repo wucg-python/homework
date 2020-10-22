@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vue-router.3.0.1(1).js"></script>
+</head>
+<body>
+
+<div id="app">
+<h2>这是我学习的一小步</h2>
+    <hr>
+<router-view></router-view>
+</div>
+
+<script>
+
+    let first = {
+        template:`
+        <div>
+        这是组件一
+        <button @click="totwo">跳转到组件二</button>
+</div>
+        `,
+        methods:{
+            totwo(){
+                // this.$router.push('/second?id=5&name=王超')
+                this.$router.push('/second/5/王超')
+            }
+        }
+    }
+
+    let second = {
+        template:`
+        <div>
+        这是组件二
+        <div>这是query拼接通过js跳转传递过来的参数--》{{$route.query.id}}
+        and{{$route.query.name}}
+        </div>
+         <div>这是动态路由通过js跳转传递过来的参数--》{{$route.params.id}}
+        and{{$route.params.name}}
+        </div>
+</div>
+        `
+    }
+
+    let myrouter = new VueRouter({
+        routes:[
+            {path:'/first',component:first},
+            {path: '/second/:id/:name',component: second},
+            {path: '/',redirect:'/first'}
+        ]
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        router:myrouter,
+    })
+</script>
+
+</body>
+</html>

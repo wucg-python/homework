@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vue-router.3.0.1(1).js"></script>
+</head>
+<body>
+<!--动态传参是指将参数作为路由的一部分传递-->
+<div id="app">
+<h2>父子系统</h2>
+    <hr>
+    <router-view></router-view>
+</div>
+
+<script>
+    let first = {
+        template:`
+        <div>这是第一个组件
+        <router-link to="/second/1/王超/武崇刚">去吧</router-link>
+        </div>
+
+        `
+    }
+
+    let second = {
+        template:`
+        <div>这是第二个组件
+        <h5>{{$route.params.father}}是{{$route.params.name}}的爸爸</h5>
+        </div>
+        `
+    }
+
+    let myrouter = new VueRouter({
+        routes:[
+            {path:'/first',component:first},
+            {path:'/second/:id/:name/:father',component:second},
+            {path: '/',redirect:'/first'}
+        ]
+    })
+    new Vue({
+        el: "#app",
+        data: {},
+        router:myrouter,
+    })
+</script>
+
+</body>
+</html>
