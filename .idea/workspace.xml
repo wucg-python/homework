@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f95800b-c260-492b-81a5-7ab1571f13e1" name="Default Changelist" comment="添加gitignore">
-      <change afterPath="$PROJECT_DIR$/vue-day2/vue的生命周期.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day2/vue的组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day2/监听事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day2/箭头函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day2/组件之间数据子传父.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day2/组件之间数据父传子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day2/计算属性computed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-day2/对props的进一步认识.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +78,7 @@
       <updated>1603172940523</updated>
       <workItem from="1603172942874" duration="183000" />
       <workItem from="1603183349226" duration="16253000" />
-      <workItem from="1603239636389" duration="20897000" />
+      <workItem from="1603239636389" duration="24911000" />
     </task>
     <task id="LOCAL-00001" summary="添加gitignore">
       <created>1603239809959</created>

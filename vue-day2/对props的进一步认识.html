@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+<!--  传递静态的值  -->
+<!--<study title="我是你爸爸"></study>-->
+
+<!--  传递动态的值 ,通过v-bind来传递 -->
+    <study v-bind:title="name"></study>
+</div>
+
+<script>
+
+    let study = {
+        template:`
+        <div>{{title}}
+        <input type="button" :value="title">
+        </div>
+        `,
+        //  props以字符串数组的形式
+        props:['title']
+    }
+
+    new Vue({
+        el: "#app",
+        data: {
+            name:'王超操',
+        },
+        components:{
+            study:study
+        }
+    })
+</script>
+
+</body>
+</html>
