@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f95800b-c260-492b-81a5-7ab1571f13e1" name="Default Changelist" comment="添加gitignore">
-      <change afterPath="$PROJECT_DIR$/js/vue-router.3.0.1(1).js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day3/js跳转传参.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day3/路由query拼接传参.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day3/路由动态传参.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day3/路由的使用.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-day3/路由的进一步使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-day4/localStorage和sessionStorage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-day2/对props的进一步认识.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue-day2/对props的进一步认识.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -87,7 +81,9 @@
       <updated>1603172940523</updated>
       <workItem from="1603172942874" duration="183000" />
       <workItem from="1603183349226" duration="16253000" />
-      <workItem from="1603239636389" duration="35335000" />
+      <workItem from="1603239636389" duration="46091000" />
+      <workItem from="1603442120160" duration="340000" />
+      <workItem from="1603587715200" duration="3463000" />
     </task>
     <task id="LOCAL-00001" summary="添加gitignore">
       <created>1603239809959</created>
@@ -115,16 +111,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="添加gitignore" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="466" y="110" key="FileChooserDialogImpl" timestamp="1603272273872">
+    <state x="466" y="110" key="FileChooserDialogImpl" timestamp="1603442461646">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="110" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603272273872" />
+    <state x="466" y="110" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603442461646" />
     <state x="186" y="10" key="SettingsEditor" timestamp="1603367247144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

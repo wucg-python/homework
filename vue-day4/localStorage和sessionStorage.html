@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vue-router.3.0.1(1).js"></script>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script>
+
+    // localStorage.name = "王超"
+    // localStorage['id'] = 2
+    // localStorage.setItem('age',18)
+    // localStorage.removeItem('name')
+
+    // 遍历数据
+    // for (let i=0;i<localStorage.length;i++){
+    //     console.log(i,localStorage.key(i),localStorage.getItem(localStorage.key(i)))
+    // }
+    // localStorage.clear()
+    // console.log(localStorage.name)
+
+    // sessionStorage.name = '王超'
+    // sessionStorage['age'] = 10
+    // sessionStorage.setItem('gender','男')
+    //
+    // let name = sessionStorage.getItem('name')
+    // console.log(name)
+    // sessionStorage.clear()
+
+
+
+    // localStorage只能以文本字符串的格式存储，存储对象类型时，要先将
+    // 进行系列化 ，取用数据要进行反序列化
+    let local = localStorage;
+    user = {
+        id:1,
+        name:'王超',
+        age:18,
+    }
+    local.user = JSON.stringify(user)
+    console.log(local.user)
+    console.log(JSON.parse(local.user))
+
+    new Vue({
+        el: "#app",
+        data: {},
+    })
+</script>
+
+</body>
+</html>
