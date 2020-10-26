@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f95800b-c260-492b-81a5-7ab1571f13e1" name="Default Changelist" comment="添加gitignore">
-      <change afterPath="$PROJECT_DIR$/vue-day4/localStorage和sessionStorage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vuex.3.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-day5/getters的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-day5/vuex的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-day5/vuex的应用.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,12 +66,13 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\wu\WebstormProjects\untitled\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\wu\WebstormProjects\untitled\js" />
       <recent name="D:\Users\wu\WebstormProjects\untitled\day2" />
       <recent name="D:\Users\wu\WebstormProjects\untitled" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\wu\WebstormProjects\untitled\js" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,7 +87,8 @@
       <workItem from="1603183349226" duration="16253000" />
       <workItem from="1603239636389" duration="46091000" />
       <workItem from="1603442120160" duration="340000" />
-      <workItem from="1603587715200" duration="3463000" />
+      <workItem from="1603587715200" duration="4243000" />
+      <workItem from="1603698554438" duration="7317000" />
     </task>
     <task id="LOCAL-00001" summary="添加gitignore">
       <created>1603239809959</created>

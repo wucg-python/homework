@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vue-router.3.0.1(1).js"></script>
+    <script src="../js/vuex.3.0.1.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <first></first>
+    <hr>
+    <second></second>
+
+</div>
+
+<script>
+
+    let first = {
+        template:`
+        <div>
+        这是第一个组件,{{$store.state.number}}
+        <div>王超的爸爸是谁？ <h2></h2>{{$store.state.name}}</div>
+        <input type="button" value="我猜是？" @click="father">
+</div>
+        `,
+        methods:{
+            // 在点击事件的函数中向状态机提交一个动作
+            father(){
+                this.$store.commit('fathers');
+            }
+        }
+    }
+
+    let second = {
+        template:`
+        <div>
+        这是第二个组件  {{$store.state.name}}
+</div>
+        `
+    }
+
+    //  创建状态机   初始化状态state和行为mutations
+    let mystory = new Vuex.Store({
+        state:{
+            number:5,    // 共享的数据
+            name:'',
+        },
+
+        // 状态机的动作，所有组件提交的动作都在这里被接收
+        mutations:{
+            fathers(name) {
+                name.name = '武崇刚';
+            }
+        }
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        components:{
+            first:first,
+            second:second,
+        },
+        store:mystory,
+    })
+</script>
+
+</body>
+</html>

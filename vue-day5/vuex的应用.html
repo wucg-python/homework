@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vue-router.3.0.1(1).js"></script>
+    <script src="../js/vuex.3.0.1.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <h3>大型认亲现场</h3>
+    <first></first>
+    <hr>
+    <second></second>
+</div>
+
+<script>
+
+    let first = {
+        template:`
+        <div>
+        我是谁的爸爸
+        <div><input type="button" value="答案" @click="me"></div>
+</div>
+        `,
+        data(){
+            return {
+                name:'王超',
+            }
+        },
+        methods:{
+            me(){
+                //  在提交动作时，可以传递参数，但只能传递一个参数，
+                //  传递多个参数可以传递一个对象
+                this.$store.commit('she',this.name)
+                console.log(this)
+
+            }
+        }
+    }
+
+    let second = {
+        template: `
+        <div>
+            我是{{$store.state.name}}的爸爸
+</div>
+        `
+    }
+
+    let mystore = new Vuex.Store({
+        state:{
+            name:'林强',
+        },
+        mutations:{
+            she(state,name){
+                state.name = name
+            }
+        }
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        components:{
+          first:first,
+          second:second,
+        },
+        store:mystore,
+    })
+</script>
+
+</body>
+</html>

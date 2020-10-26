@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vue-router.3.0.1(1).js"></script>
+    <script src="../js/vuex.3.0.1.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <first></first>
+    <hr>
+    <second></second>
+</div>
+
+<script>
+
+    let first = {
+        template:`
+        <div>
+        <button @click="clickme">点我加一</button>
+</div>
+        `,
+        methods:{
+            clickme() {
+                this.$store.commit('dian')
+            }
+        }
+    }
+
+    let second = {
+
+        template: `
+        <div>
+        我是这个数字 {{$store.state.number}}
+        我是相反数  {{$store.getters.fushu}}
+</div>
+        `
+    }
+
+    let mystore = new Vuex.Store({
+        state:{
+            number:10,
+        },
+        mutations:{
+            dian(state){
+                state.number ++;
+            }
+        },
+        getters:{
+            fushu(state){
+                return - state.number;
+            }
+        }
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        components:{
+            first:first,
+            second:second,
+        },
+        store:mystore,
+    })
+</script>
+
+</body>
+</html>
